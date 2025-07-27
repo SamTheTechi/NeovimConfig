@@ -1,14 +1,26 @@
 -- return {
--- "sainnhe/gruvbox-material",
--- lazy = false,
--- priority = 1000,
--- config = function()
---
--- vim.g.gruvbox_material_background = "hard"
--- vim.g.gruvbox_material_enable_italic = 1
--- vim.g:gruvbox_material_transparent_background = 1
--- vim.cmd("colorscheme gruvbox-material")
--- end,
+-- 	"ellisonleao/gruvbox.nvim",
+-- 	lazy = false,
+-- 	priority = 1000,
+-- 	config = function()
+-- 		require("gruvbox").setup({
+-- 			bold = true,
+-- 			italic = {
+-- 				strings = true,
+-- 				emphasis = true,
+-- 				comments = true,
+-- 				operators = false,
+-- 				folds = true,
+-- 			},
+-- 			strikethrough = true,
+-- 			contrast = "soft",
+-- 			palette_overrides = {},
+-- 			overrides = {},
+-- 			dim_inactive = false,
+-- 			transparent_mode = true,
+-- 		})
+-- 		vim.cmd("colorscheme gruvbox")
+-- 	end,
 -- }
 
 return {
@@ -17,7 +29,7 @@ return {
 	priority = 1000,
 	config = function()
 		require("tokyonight").setup({
-			style = "storm", -- options: "night", "storm", "moon", "day"
+			style = "night", -- options: "night", "storm", "moon", "day"
 			transparent = true,
 			styles = {
 				comments = { italic = true },
@@ -27,18 +39,31 @@ return {
 	end,
 }
 
--- return {
--- "nyoom-engineering/oxocarbon.nvim",
--- lazy = false,
--- priority = 1000,
--- config = function()
--- vim.cmd("colorscheme oxocarbon")
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
--- end,
--- }
-
+--return {
+--	"thallada/farout.nvim",
+--	lazy = false,
+--	priority = 1000,
+--	config = function()
+--		require("farout").setup({
+--			style = "night",
+--			light_style = "day",
+--			transparent = true,
+--			terminal_colors = true,
+--			styles = {
+--				comments = { italic = true },
+--				keywords = { italic = true },
+--				functions = {},
+--				variables = {},
+--				sidebars = "transparent",
+--				floats = "transparent",
+--			},
+--			sidebars = { "qf", "help" },
+--			day_brightness = 0.1,
+--		})
+--		vim.cmd("colorscheme farout")
+--	end,
+--}
+--
 
 -- return {
 -- "catppuccin/nvim",

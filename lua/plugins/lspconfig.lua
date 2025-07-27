@@ -174,6 +174,16 @@ return {
 			jsonls = {},
 			tailwindcss = {},
 			pylsp = {
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = {
+								enabled = true,
+								maxLineLength = 500,
+							},
+						},
+					},
+				},
 			},
 			buf = {
 				cmd = { "buf", "serve" },
