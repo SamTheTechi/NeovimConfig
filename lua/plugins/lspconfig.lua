@@ -157,6 +157,10 @@ return {
 			clangd = {
 				filetypes = { "c", "cpp", "objc", "objcpp" },
 			},
+			sqlls = {
+				cmd = { "sql-language-server", "up", "--method", "stdio" },
+				filetypes = { "sql", "mysql" },
+			},
 			ts_ls = {},
 			rust_analyzer = {
 				procMacro = {

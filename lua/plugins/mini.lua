@@ -17,4 +17,3 @@ return { -- Collection of various small independent plugins/modules
 		require("mini.surround").setup()
 	end,
 }
-

@@ -30,3 +30,15 @@ require("neo-tree").setup({
 		},
 	},
 })
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = "*.tex",
+	callback = function()
+		for _, client in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
+			if client.name == "texlab" then
+				vim.cmd("LspTexlabBuild")
+				return
+			end
+		end
+	end,
+})
