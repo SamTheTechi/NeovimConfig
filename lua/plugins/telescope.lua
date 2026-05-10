@@ -13,7 +13,7 @@ return {
 		},
 		{ "nvim-telescope/telescope-ui-select.nvim" },
 
-		{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+		{ "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
 	},
 	config = function()
 		require("telescope").setup({
@@ -25,6 +25,12 @@ return {
 					require("telescope.themes").get_dropdown(),
 				},
 			},
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "TelescopePrompt",
+				callback = function(args)
+					vim.treesitter.stop(args.buf)
+				end,
+			})
 		})
 
 		pcall(require("telescope").load_extension, "fzf")
